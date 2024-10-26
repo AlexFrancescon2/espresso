@@ -61,9 +61,6 @@ export const fieldsCommonStyles = {
     background: "$grey2",
     cursor: "not-allowed !important",
   },
-  "&::placeholder": {
-    color: "$grey1",
-  },
   "&:focus-visible": {
     border: "1px solid $primary",
     outline: "none",

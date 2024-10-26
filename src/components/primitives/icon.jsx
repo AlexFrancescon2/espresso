@@ -1,5 +1,3 @@
-import React from "react";
-
 import { css, keyframes } from "@/styles/system";
 
 import { directionSpacingVariants } from "@/components/primitives/common";

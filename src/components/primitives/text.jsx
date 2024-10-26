@@ -1,5 +1,3 @@
-import React from "react";
-
 import { css } from "@/styles/system";
 
 export const Text = ({
@@ -8,11 +6,12 @@ export const Text = ({
   size,
   color,
   isBold,
+  isBlock,
   hasSpaceLeft,
   hasSpaceTop,
   hasSpaceRight,
   bottomMargin,
-
+  onClick,
   center,
   hasEllipsis,
   noWrap,
@@ -26,6 +25,7 @@ export const Text = ({
           size,
           color,
           isBold,
+          isBlock,
           hasSpaceLeft,
           hasSpaceTop,
           hasSpaceRight,
@@ -35,6 +35,7 @@ export const Text = ({
           noWrap,
           css,
         })}
+        onClick={onClick}
       >
         {children}
       </span>
@@ -57,6 +58,7 @@ const styles = css({
       blue: { color: "$blue1" },
       red: { color: "$red1" },
       white: { color: "$white" },
+      black: { color: "$black" },
     },
     size: {
       xsmall: {
@@ -72,7 +74,7 @@ const styles = css({
         fontSize: "$18",
       },
       xlarge: {
-        fontSize: "$20",
+        fontSize: "$45",
         fontWeight: "bold",
       },
     },
@@ -94,6 +96,11 @@ const styles = css({
     isBold: {
       true: {
         fontWeight: 700,
+      },
+    },
+    isBlock: {
+      true: {
+        display: "block",
       },
     },
     bottomMargin: {

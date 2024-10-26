@@ -1,5 +1,3 @@
-import React, { forwardRef } from "react";
-
 import { css } from "@/styles/system";
 import { Text } from "@/components/primitives/text";
 import { Div } from "@/components/primitives/div";

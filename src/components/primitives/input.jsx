@@ -1,5 +1,3 @@
-import React from "react";
-
 import { css } from "@/styles/system";
 import { Div } from "@/components/primitives/div";
 import { Text } from "@/components/primitives/text";
@@ -31,7 +29,6 @@ export const Input = ({
   onMouseDown,
   onKeyDown,
   type = "text",
-  isFitContent,
   css,
   role,
   maxLength,
@@ -51,7 +48,7 @@ export const Input = ({
           size,
         })}
       >
-        <div>
+        <div style={{ width: "100%" }}>
           {label && (
             <Text
               css={{
@@ -83,9 +80,6 @@ export const Input = ({
               onMouseDown={onMouseDown}
               onKeyDown={(event) => {
                 onKeyDown && onKeyDown(event);
-              }}
-              onKeyUp={(event) => {
-                isFitContent && onkeyUpHandleSize(event);
               }}
               onBlur={onBlur}
               autoFocus={autoFocus}

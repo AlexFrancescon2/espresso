@@ -1,5 +1,4 @@
-import React from "react";
-import { css, keyframes } from "@/styles/system";
+import { css } from "@/styles/system";
 import { directionSpacingVariants } from "@/components/primitives/common";
 
 export const Button = ({
@@ -69,16 +68,10 @@ const wrapper = css({
   },
 });
 
-const focusKeyframe = keyframes({
-  "0%": { filter: "brightness(5%)" },
-  "50%": { filter: "brightness(6%)" },
-  "100%": { filter: "brightness(7%)" },
-});
-
-export const styles = css({
+const styles = css({
   display: "inline-flex",
   alignItems: "center",
-  padding: "$4 $8 $4 $8",
+  padding: "$8 $16 $8 $16",
   height: "$14",
   borderRadius: "$4",
   fontFamily: "$normal",
