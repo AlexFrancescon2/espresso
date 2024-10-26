@@ -62,6 +62,9 @@ const styles = css({
       greyClear: {
         color: "$grey10",
       },
+      black: {
+        color: "$black",
+      },
       light: {
         color: "$grey4",
       },

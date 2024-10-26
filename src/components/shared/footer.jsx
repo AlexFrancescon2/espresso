@@ -1,47 +1,44 @@
 // Header.jsx
-import { Link } from "@/components/primitives/link";
-import { Div } from "@/components/primitives/div";
+
+// import { Div } from "@/components/primitives/div";
+
+import { Text } from "@/components/primitives/text";
 import { css } from "@/styles/system";
-import { useLanguage } from "@/assets/translations/languageProvider";
+
+// import { useLanguage } from "@/assets/translations/languageProvider";
 
 export const Footer = () => {
-  const { translations } = useLanguage();
+  // const { translations } = useLanguage();
   return (
-    <footer className={footerStyle()}>
-      <div className={topStyle()}>
-        <Div isFlex isAlignCenter>
-          <Link to="/" color="white" size="xlarge">
-            MyApp
-          </Link>
-        </Div>
-        <div>Socials</div>
-        <Link to="/privacy-policy">{translations.privacy_policy}</Link>
-      </div>
-      <div className={bottomStyle()}>
-        Developed by Alex Francescon. All rights reserved.
-      </div>
-    </footer>
+    <div className={wrapperStyle()}>
+      <footer className={footerStyle()}>
+        <span></span>
+        <Text color="white">Home</Text>
+        <Text color="white">Services</Text>
+        <Text color="white">Socials</Text>
+        <span></span>
+      </footer>
+    </div>
   );
 };
 
-const footerStyle = css({
-  top: 0,
+const wrapperStyle = css({
   width: "100%",
-  backgroundColor: "$black3",
-  boxShadow: "8px 0px 16px rgba(0, 0, 0, 0.2)",
-});
-
-const topStyle = css({
-  padding: "$2 $16",
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "center",
   alignItems: "center",
 });
 
-const bottomStyle = css({
+const footerStyle = css({
+  position: "fixed",
+  bottom: "50px",
+  borderRadius: "$pill",
+  width: "60vw",
+  zIndex: "99",
+  boxShadow: "8px 0px 16px rgba(0, 0, 0, 0.2)",
+  backgroundColor: "$black",
+  padding: "$16",
+  border: "3px solid $white",
   display: "flex",
-  fontSize: "$14",
-  justifyContent: "center",
-  padding: "$4",
-  backgroundColor: "$black2",
+  justifyContent: "space-between",
 });

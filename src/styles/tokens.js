@@ -7,14 +7,14 @@ export const colors = {
   grey4: "#334155",
   grey5: "#1e293b",
   grey6: "#0f172a",
-  black: "#020617",
+  black: "#242424",
   black2: "#242424",
   black3: "#1a1a1a",
   blue1: "#2563eb",
   blue2: "#1d4ed8",
   red1: "#e11d48",
-  primary: "#2563eb",
-  secondary: "",
+  primary: "#CBAC91",
+  secondary: "#FFEBCD",
 };
 
 export const shadows = colors;

@@ -45,6 +45,7 @@ export const Text = ({
 
 const styles = css({
   fontFamily: "$normal",
+  color: "$black",
   variants: {
     variant: {
       error: {
@@ -58,7 +59,6 @@ const styles = css({
       blue: { color: "$blue1" },
       red: { color: "$red1" },
       white: { color: "$white" },
-      black: { color: "$black" },
     },
     size: {
       xsmall: {
@@ -74,7 +74,7 @@ const styles = css({
         fontSize: "$18",
       },
       xlarge: {
-        fontSize: "$45",
+        fontSize: "$35",
         fontWeight: "bold",
       },
     },
