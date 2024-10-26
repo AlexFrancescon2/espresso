@@ -13,7 +13,12 @@ export const Services = () => {
 
   return (
     <>
-      <Section backgroundImage="bg2" zindex={4} backgroundColor="primary">
+      <Section
+        backgroundImage="bg2"
+        zindex={4}
+        backgroundColor="primary"
+        id="services"
+      >
         <Text size="xlarge" center>
           {translations["services.title"]}
         </Text>

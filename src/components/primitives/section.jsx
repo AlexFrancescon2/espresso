@@ -8,9 +8,11 @@ export const Section = ({
   zindex,
   marginTop,
   backgroundColor,
+  id,
 }) => {
   return (
     <div
+      id={id}
       className={styles({
         url: backgroundImage,
         index: zindex,

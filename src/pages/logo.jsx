@@ -8,7 +8,12 @@ export const Logo = () => {
 
   return (
     <>
-      <Section backgroundImage="bg1" zindex={5} backgroundColor="secondary">
+      <Section
+        backgroundImage="bg1"
+        zindex={5}
+        backgroundColor="secondary"
+        id="logo"
+      >
         <Div
           isFlex
           isJustifyCenter

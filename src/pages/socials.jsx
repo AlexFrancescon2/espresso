@@ -8,7 +8,12 @@ export const Socials = () => {
 
   return (
     <>
-      <Section backgroundImage="bg1" zindex={3} backgroundColor="secondary">
+      <Section
+        backgroundImage="bg1"
+        zindex={3}
+        backgroundColor="secondary"
+        id="socials"
+      >
         <Div
           isFlex
           isJustifyCenter
