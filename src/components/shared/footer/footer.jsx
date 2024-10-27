@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-import { Div } from "@/components/primitives/div";
+import { LanguageSelector } from "./language-selector";
+import { MenuItem } from "./menu-items";
 import { css } from "@/styles/system";
-import { useLanguage } from "@/assets/translations/languageProvider";
-
-// import { useLanguage } from "@/assets/translations/languageProvider";
 
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
@@ -14,11 +12,8 @@ const scrollToSection = (id) => {
 };
 
 export const Footer = () => {
-  // const { translations } = useLanguage();
-  const sections = ["logo", "services", "socials"];
+  const sections = useMemo(() => ["logo", "services", "socials"], []);
   const [activeSection, setActiveSection] = useState("logo");
-
-  console.log({ activeSection });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -94,51 +89,3 @@ const footerStyle = css({
   display: "flex",
   justifyContent: "space-between",
 });
-
-const MenuItem = ({ children, isActive, onClick }) => {
-  return (
-    <span className={menuItemStyle({ isActive })} onClick={onClick}>
-      {children}
-    </span>
-  );
-};
-
-const menuItemStyle = css({
-  color: "$white",
-  cursor: "pointer",
-  textDecoration: "none",
-  borderBottom: "2px solid transparent",
-  transition: "border-bottom 0.3s ease",
-  variants: {
-    isActive: {
-      true: {
-        borderBottom: "2px solid $white",
-        fontWeight: "700",
-      },
-      false: {
-        borderBottom: "2px solid transparent",
-      },
-    },
-  },
-});
-
-const LanguageSelector = () => {
-  const { language } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <Div isFlex isAlignCenter isJustifyCenter css={languageCircleStyle}>
-      {language}
-    </Div>
-  );
-};
-
-const languageCircleStyle = {
-  position: "absolute",
-  width: "40px",
-  height: "40px",
-  border: "2px solid $white",
-  borderRadius: "$pill",
-  right: "8px",
-  top: "7.5px",
-  cursor: "pointer",
-};

@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Footer } from "@/components/shared/footer";
+import { Footer } from "@/components/shared/footer/footer";
 import { Home } from "@/pages/home";
 import { LanguageProvider } from "@/assets/translations/languageProvider";
 

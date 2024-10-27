@@ -20,7 +20,12 @@ export const LanguageProvider = ({ children }) => {
 
   return (
     <LanguageContext.Provider
-      value={{ language, translations: translations[language], switchLanguage }}
+      value={{
+        language,
+        languages: Object.keys(translations),
+        translations: translations[language],
+        switchLanguage,
+      }}
     >
       {children}
     </LanguageContext.Provider>

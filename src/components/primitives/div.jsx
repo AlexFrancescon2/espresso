@@ -11,7 +11,7 @@ export const Div = ({
   return (
     <div
       className={styles({ css, isFlex, isJustifyCenter, isAlignCenter })}
-      onClick={onClick && onClick()}
+      onClick={() => onClick?.()}
     >
       {children}
     </div>
