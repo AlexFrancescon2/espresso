@@ -1,10 +1,8 @@
-// Header.jsx
-
-// import { Div } from "@/components/primitives/div";
-
 import { useEffect, useState } from "react";
 
+import { Div } from "@/components/primitives/div";
 import { css } from "@/styles/system";
+import { useLanguage } from "@/assets/translations/languageProvider";
 
 // import { useLanguage } from "@/assets/translations/languageProvider";
 
@@ -70,6 +68,7 @@ export const Footer = () => {
           Socials
         </MenuItem>
         <span></span>
+        <LanguageSelector />
       </footer>
     </div>
   );
@@ -122,3 +121,24 @@ const menuItemStyle = css({
     },
   },
 });
+
+const LanguageSelector = () => {
+  const { language } = useLanguage();
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <Div isFlex isAlignCenter isJustifyCenter css={languageCircleStyle}>
+      {language}
+    </Div>
+  );
+};
+
+const languageCircleStyle = {
+  position: "absolute",
+  width: "40px",
+  height: "40px",
+  border: "2px solid $white",
+  borderRadius: "$pill",
+  right: "8px",
+  top: "7.5px",
+  cursor: "pointer",
+};
