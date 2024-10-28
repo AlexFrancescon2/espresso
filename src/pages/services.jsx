@@ -9,7 +9,6 @@ import { useLanguage } from "@/assets/translations/languageProvider";
 
 export const Services = () => {
   const { translations } = useLanguage();
-  console.log({ translations });
 
   return (
     <>

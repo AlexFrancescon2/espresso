@@ -8,7 +8,7 @@ export const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      {isOpen && <LanguageSelectorMenu />}
+      {isOpen && <LanguageSelectorMenu setIsOpen={setIsOpen} />}
       <Div
         isFlex
         isAlignCenter
@@ -16,7 +16,7 @@ export const LanguageSelector = () => {
         css={languageCircleStyle}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {language}
+        <img src={`src/assets/images/flags/${language}.png`} width={40}></img>
       </Div>
     </>
   );

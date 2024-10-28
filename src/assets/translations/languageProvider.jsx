@@ -1,14 +1,13 @@
 import { createContext, useContext, useState } from "react";
 
 import enTranslations from "@/assets/translations/en.json";
-
-// import itTranslations from "@/assets/translations/it.json";
+import itTranslations from "@/assets/translations/it.json";
 
 const LanguageContext = createContext();
 
 const translations = {
   en: enTranslations,
-  // it: itTranslations,
+  it: itTranslations,
 };
 
 export const LanguageProvider = ({ children }) => {
