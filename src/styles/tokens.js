@@ -15,13 +15,15 @@ export const colors = {
   red1: "#e11d48",
   primary: "#CBAC91",
   secondary: "#FFEBCD",
+
+  //e9c795
 };
 
 export const shadows = colors;
 
 export const fonts = {
   normal:
-    "Roboto Custom, -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif",
+    "Montserrat, Roboto Custom, -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif",
   mono: "Menlo, Consolas, monospace",
 };
 

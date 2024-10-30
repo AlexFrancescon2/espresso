@@ -1,13 +1,20 @@
+import { useRef, useState } from "react";
+
 import { Div } from "@/components/primitives/div";
 import { LanguageSelectorMenu } from "./language-selector-menu";
+import { useClickOutside } from "@/hooks/click-outside";
 import { useLanguage } from "@/assets/translations/languageProvider";
-import { useState } from "react";
 
 export const LanguageSelector = () => {
   const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+
+  const ref = useRef(null);
+
+  useClickOutside(ref, () => setIsOpen(false));
+
   return (
-    <>
+    <div ref={ref}>
       {isOpen && <LanguageSelectorMenu setIsOpen={setIsOpen} />}
       <Div
         isFlex
@@ -18,7 +25,7 @@ export const LanguageSelector = () => {
       >
         <img src={`src/assets/images/flags/${language}.png`} width={40}></img>
       </Div>
-    </>
+    </div>
   );
 };
 

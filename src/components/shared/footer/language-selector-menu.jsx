@@ -1,4 +1,5 @@
 import { Div } from "@/components/primitives/div";
+import { motion } from "framer-motion";
 import { useLanguage } from "@/assets/translations/languageProvider";
 
 export const LanguageSelectorMenu = ({ setIsOpen }) => {
@@ -11,15 +12,18 @@ export const LanguageSelectorMenu = ({ setIsOpen }) => {
 
   return (
     <Div isFlex isAlignCenter isJustifyCenter css={languageSelectorMenuStyle}>
-      {languages.map((lang) => {
+      {languages.map((lang, index) => {
         return (
-          <Div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: `0.${index}` }}
             key={lang}
-            css={languageCircleStyle}
-            onClick={() => onSwitchLang(lang)}
           >
-            <img src={`src/assets/images/flags/${lang}.png`} width={30}></img>
-          </Div>
+            <Div css={languageCircleStyle} onClick={() => onSwitchLang(lang)}>
+              <img src={`src/assets/images/flags/${lang}.png`} width={30}></img>
+            </Div>
+          </motion.div>
         );
       })}
     </Div>
