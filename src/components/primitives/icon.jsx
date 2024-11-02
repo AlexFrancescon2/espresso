@@ -80,8 +80,8 @@ const styles = css({
       white: {
         color: "$white",
       },
-      mediumgrey: {
-        color: "$grey12",
+      grey: {
+        color: "$grey4",
       },
       darkgrey: {
         color: "$grey6",
@@ -120,38 +120,31 @@ const styles = css({
         },
       },
       small: {
-        width: "$3",
+        width: "$4",
         "& svg": {
           width: "$3",
           height: "$3",
         },
       },
       medium: {
-        width: "$4",
+        width: "$16",
         "& svg": {
-          width: "$4",
-          height: "$4",
+          width: "$16",
+          height: "$16",
         },
       },
       large: {
-        width: "$5",
+        width: "$20",
         "& svg": {
-          width: "$5",
-          height: "$5",
-        },
-      },
-      mlarge: {
-        width: "$7",
-        "& svg": {
-          width: "$7",
-          height: "$7",
+          width: "$20",
+          height: "$20",
         },
       },
       xlarge: {
-        width: "$8",
+        width: "$28",
         "& svg": {
-          width: "$8",
-          height: "$8",
+          width: "$28",
+          height: "$28",
         },
       },
       giant: {

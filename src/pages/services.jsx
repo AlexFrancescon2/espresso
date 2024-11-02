@@ -18,32 +18,53 @@ export const Services = () => {
         backgroundColor="primary"
         id="services"
       >
-        <Text size="xlarge" center>
-          {translations["services.title"]}
-        </Text>
-        <Div isFlex css={{ gap: "$20" }}>
+        <Div isFlex isJustifyCenter isAlignCenter css={{ marginBottom: "$28" }}>
+          <Text size="xlarge" center>
+            {translations["services.title"]}
+          </Text>
+        </Div>
+
+        <Div isFlex css={cardContainerStyle} isAlignCenter isJustifyCenter>
           <Card
             icon={FaCog}
             title={translations["services.service_1_title"]}
             description={translations["services.service_1_description"]}
+            css={cardStyle}
           />
           <Card
             icon={FaCog}
             title={translations["services.service_2_title"]}
             description={translations["services.service_2_description"]}
+            css={cardStyle}
           />
           <Card
             icon={FaCog}
             title={translations["services.service_3_title"]}
             description={translations["services.service_3_description"]}
+            css={cardStyle}
           />
           <Card
             icon={FaCog}
             title={translations["services.service_4_title"]}
             description={translations["services.service_4_description"]}
+            css={cardStyle}
           />
         </Div>
       </Section>
     </>
   );
+};
+
+const cardContainerStyle = {
+  gap: "$48",
+  padding: "$20 10vw",
+  flexWrap: "wrap",
+};
+
+const cardStyle = {
+  width: "40%",
+  alignSelf: "stretch",
+  "@bp3max": {
+    width: "100%",
+  },
 };

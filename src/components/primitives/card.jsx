@@ -6,7 +6,12 @@ import { css } from "@/styles/system";
 export const Card = ({ css, onClick, icon, title, description }) => {
   return (
     <div className={styles({ css })} onClick={onClick && onClick()}>
-      <Icon render={icon} color="black" />
+      <Icon
+        render={icon}
+        color="grey"
+        size="xlarge"
+        css={{ marginRight: "$28" }}
+      />
       <Div>
         <Text size="large" isBold isBlock>
           {title}
@@ -22,9 +27,8 @@ const styles = css({
   borderRadius: "$12",
   padding: "$20",
   display: "flex",
-  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+  boxShadow: "10px 10px 20px -14px rgba(0, 0, 0, 1.0)",
   "&:hover": {
-    boxShadow:
-      "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+    boxShadow: "12px 12px 22px -14px rgba(0, 0, 0, 1.0)",
   },
 });

@@ -33,11 +33,16 @@ const styles = ({ url, index, marginTop, backgroundColor }) =>
     minHeight: "100vh",
     padding: "$64",
     position: "relative",
-    backgroundSize: "100% auto",
-    backgroundPosition: "bottom",
-    backgroundRepeat: "no-repeat",
-    backgroundImage: `url(src/assets/images/${url}.png)`,
-    backgroundColor: `$${backgroundColor}`,
     zIndex: index,
     marginTop: marginTop,
+    "@bp1max": {
+      padding: "$20",
+    },
+    "@bp4min": {
+      backgroundSize: "100% auto",
+      backgroundPosition: "bottom",
+      backgroundRepeat: "no-repeat",
+      backgroundImage: `url(src/assets/images/${url}.png)`,
+      backgroundColor: `$${backgroundColor}`,
+    },
   });

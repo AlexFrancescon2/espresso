@@ -13,10 +13,8 @@ export const colors = {
   blue1: "#2563eb",
   blue2: "#1d4ed8",
   red1: "#e11d48",
-  primary: "#CBAC91",
+  primary: "#DCC39F",
   secondary: "#FFEBCD",
-
-  //e9c795
 };
 
 export const shadows = colors;
@@ -32,6 +30,7 @@ export const space = {
   2: "2px",
   4: "4px",
   8: "8px",
+  12: "12px",
   16: "16px",
   20: "20px",
   24: "24px",
@@ -48,6 +47,7 @@ export const sizes = {
   2: "2px",
   4: "4px",
   8: "8px",
+  12: "12px",
   16: "16px",
   20: "20px",
   24: "24px",
@@ -102,6 +102,7 @@ export const media = {
   bp3max: "(max-width: 1024px)",
   bp4min: "(min-width: 1400px)",
   bp4max: "(max-width: 1400px)",
+  bpbg: "(min-width: 1260px)",
 };
 
 export const boxShadows = {
