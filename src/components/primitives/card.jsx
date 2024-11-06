@@ -1,22 +1,20 @@
 import { Div } from "@/components/primitives/div";
-import { Icon } from "@/components/primitives/icon";
 import { Text } from "@/components/primitives/text";
 import { css } from "@/styles/system";
 
-export const Card = ({ css, onClick, icon, title, description }) => {
+export const Card = ({ css, onClick, imageSrc, title, description }) => {
   return (
     <div className={styles({ css })} onClick={onClick && onClick()}>
-      <Icon
-        render={icon}
-        color="grey"
-        size="xlarge"
-        css={{ marginRight: "$28" }}
-      />
+      <Div isFlex isAlignCenter isJustifyCenter>
+        <div>
+          <img src={imageSrc} className={imageStyle()} />
+        </div>
+      </Div>
       <Div>
-        <Text size="large" isBold isBlock>
+        <Text size="large" isBold isBlock css={{ marginBottom: "$4" }}>
           {title}
         </Text>
-        <Text>{description}</Text>
+        <Text css={{ fontSize: "$14" }}>{description}</Text>
       </Div>
     </div>
   );
@@ -31,4 +29,10 @@ const styles = css({
   "&:hover": {
     boxShadow: "12px 12px 22px -14px rgba(0, 0, 0, 1.0)",
   },
+});
+
+const imageStyle = css({
+  marginRight: "$28",
+  width: "80px",
+  height: "auto",
 });

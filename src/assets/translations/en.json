@@ -1,12 +1,13 @@
 {
   "logo.subtitle": "IT Solutions",
-  "services.title": "Looking for",
-  "services.service_1_title": "Test",
-  "services.service_1_description": " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
-  "services.service_2_title": "Test",
-  "services.service_2_description": "Test description",
-  "services.service_3_title": "Test",
-  "services.service_3_description": "Test description",
-  "services.service_4_title": "Test",
-  "services.service_4_description": "Test description"
+  "services.title": "How We Help You Win",
+  "socials.title": "Socials",
+  "services.service_1_title": "Drive Sales Online",
+  "services.service_1_description": "We turn browsers into buyers. Our online sales and ad strategies get your products in front of the right eyes and keep them coming back for more. Sales growth? Guaranteed.",
+  "services.service_2_title": "Cloud Solutions Built for You",
+  "services.service_2_description": "Unlock the cloud’s full potential. From smart data management to seamless integrations, we design cloud solutions that boost productivity and cut overhead, leaving you free to scale with ease.",
+  "services.service_3_title": "Empower Through Training",
+  "services.service_3_description": "Knowledge is power! Our hands-on training makes sure your team stays at the top of their game, streamlining operations and maximizing results with the skills that matter. ",
+  "services.service_4_title": "Yep, We Do AI",
+  "services.service_4_description": "AI is no longer optional, and we’ve got you covered. From e-commerce pricing magic to customer-friendly chatbots, our AI solutions give you an edge that sticks."
 }

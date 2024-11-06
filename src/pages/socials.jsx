@@ -1,10 +1,10 @@
 import { Div } from "@/components/primitives/div";
 import { Section } from "@/components/primitives/section";
-
-// import { useLanguage } from "@/assets/translations/languageProvider";
+import { Text } from "@/components/primitives/text";
+import { useLanguage } from "@/assets/translations/languageProvider";
 
 export const Socials = () => {
-  // const { translations } = useLanguage();
+  const { translations } = useLanguage();
 
   return (
     <>
@@ -14,13 +14,10 @@ export const Socials = () => {
         backgroundColor="secondary"
         id="socials"
       >
-        <Div
-          isFlex
-          isJustifyCenter
-          isAlignCenter
-          css={{ width: "100%", height: "100%" }}
-        >
-          Socials
+        <Div isFlex isJustifyCenter isAlignCenter css={{ marginBottom: "$28" }}>
+          <Text size="xlarge" center>
+            {translations["socials.title"]}
+          </Text>
         </Div>
       </Section>
     </>

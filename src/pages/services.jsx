@@ -26,25 +26,25 @@ export const Services = () => {
 
         <Div isFlex css={cardContainerStyle} isAlignCenter isJustifyCenter>
           <Card
-            icon={FaCog}
+            imageSrc={`src/assets/images/icons/shopping-online.png`}
             title={translations["services.service_1_title"]}
             description={translations["services.service_1_description"]}
             css={cardStyle}
           />
           <Card
-            icon={FaCog}
+            imageSrc={`src/assets/images/icons/server.png`}
             title={translations["services.service_2_title"]}
             description={translations["services.service_2_description"]}
             css={cardStyle}
           />
           <Card
-            icon={FaCog}
+            imageSrc={`src/assets/images/icons/analysis.png`}
             title={translations["services.service_3_title"]}
             description={translations["services.service_3_description"]}
             css={cardStyle}
           />
           <Card
-            icon={FaCog}
+            imageSrc={`src/assets/images/icons/ai.png`}
             title={translations["services.service_4_title"]}
             description={translations["services.service_4_description"]}
             css={cardStyle}
@@ -57,8 +57,11 @@ export const Services = () => {
 
 const cardContainerStyle = {
   gap: "$48",
-  padding: "$20 10vw",
+  padding: "$20 0",
   flexWrap: "wrap",
+  "@bp4min": {
+    padding: "$20 8vw",
+  },
 };
 
 const cardStyle = {
