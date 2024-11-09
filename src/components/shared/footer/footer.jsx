@@ -12,7 +12,10 @@ const scrollToSection = (id) => {
 };
 
 export const Footer = () => {
-  const sections = useMemo(() => ["logo", "services", "socials"], []);
+  const sections = useMemo(
+    () => ["logo", "solutions", "why-us", "socials"],
+    []
+  );
   const [activeSection, setActiveSection] = useState("logo");
 
   useEffect(() => {
@@ -44,17 +47,18 @@ export const Footer = () => {
     <div className={wrapperStyle()}>
       <footer className={footerStyle()}>
         <span></span>
+
         <MenuItem
-          onClick={() => scrollToSection("logo")}
-          isActive={activeSection === "logo"}
+          onClick={() => scrollToSection("solutions")}
+          isActive={activeSection === "solutions"}
         >
-          Home
+          Solutions
         </MenuItem>
         <MenuItem
-          onClick={() => scrollToSection("services")}
-          isActive={activeSection === "services"}
+          onClick={() => scrollToSection("why-us")}
+          isActive={activeSection === "why-us"}
         >
-          Services
+          Why us
         </MenuItem>
         <MenuItem
           onClick={() => scrollToSection("socials")}

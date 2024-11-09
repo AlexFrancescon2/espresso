@@ -1,4 +1,4 @@
-import { css } from "@/styles/system";
+import { css, keyframes } from "@/styles/system";
 
 export const Text = ({
   children,
@@ -16,6 +16,7 @@ export const Text = ({
   hasEllipsis,
   noWrap,
   css,
+  isUnderlined,
 }) => {
   return (
     <>
@@ -33,6 +34,7 @@ export const Text = ({
           center,
           hasEllipsis,
           noWrap,
+          isUnderlined,
           css,
         })}
         onClick={onClick}
@@ -42,6 +44,12 @@ export const Text = ({
     </>
   );
 };
+
+const underline = keyframes({
+  to: {
+    backgroundSize: "100% 100%",
+  },
+});
 
 const styles = css({
   fontFamily: "$normal",
@@ -54,7 +62,7 @@ const styles = css({
       },
     },
     color: {
-      grey: { color: "$grey6" },
+      grey: { color: "$grey7" },
       lightGrey: { color: "$grey5" },
       blue: { color: "$blue1" },
       red: { color: "$red1" },
@@ -111,6 +119,16 @@ const styles = css({
     center: {
       true: {
         textAlign: "center",
+      },
+    },
+    isUnderlined: {
+      true: {
+        lineHeight: 1.5,
+        display: "inline",
+        backgroundImage: `linear-gradient(transparent 50%, $primary 50%, $secondary 85%, transparent 85%,  transparent 100%)`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "0% 100%",
+        animation: `${underline} 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards`,
       },
     },
     hasEllipsis: {

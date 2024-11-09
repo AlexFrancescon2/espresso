@@ -28,6 +28,7 @@ const styles = css({
   boxShadow: "10px 10px 20px -14px rgba(0, 0, 0, 1.0)",
   "&:hover": {
     boxShadow: "12px 12px 22px -14px rgba(0, 0, 0, 1.0)",
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
   },
 });
 

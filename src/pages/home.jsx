@@ -1,13 +1,15 @@
 import { Div } from "@/components/primitives/div";
 import { Logo } from "@/pages/logo";
-import { Services } from "@/pages/services";
-import { Socials } from "./socials";
+import { Socials } from "@/pages/socials";
+import { Solutions } from "@/pages/solutions";
+import { WhyUs } from "@/pages/why-us";
 
 export const Home = () => {
   return (
     <Div css={{ widdth: "100vw" }}>
       <Logo />
-      <Services />
+      <Solutions />
+      <WhyUs />
       <Socials />
     </Div>
   );

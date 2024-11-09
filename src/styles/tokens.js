@@ -7,6 +7,7 @@ export const colors = {
   grey4: "#334155",
   grey5: "#1e293b",
   grey6: "#0f172a",
+  grey7: "#565960",
   black: "#242424",
   black2: "#242424",
   black3: "#1a1a1a",
@@ -40,6 +41,7 @@ export const space = {
   40: "40px",
   48: "48px",
   56: "56px",
+  60: "60px",
   64: "64px",
 };
 
@@ -68,6 +70,7 @@ export const fontSizes = {
   18: "18px",
   20: "20px",
   21: "21px",
+  24: "24px",
   27: "27px",
   35: "35px",
   45: "45px",
