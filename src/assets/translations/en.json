@@ -19,5 +19,19 @@
   "why-us.service_3_title": "Custom-Tailored Solutions",
   "why-us.service_3_description": "We’re not about one-size-fits-all. Your goals, needs, and challenges are ours, and we craft strategies that suit your vision perfectly.",
   "why-us.service_4_title": "Built on Expertise",
-  "why-us.service_4_description": "Our attention to detail and commitment to quality ensure you get exactly what your business needs—done right, every time."
+  "why-us.service_4_description": "Our attention to detail and commitment to quality ensure you get exactly what your business needs—done right, every time.",
+  "privacy_policy.title": "Privacy Policy",
+  "privacy_policy_subtitle_1": "1. No Personal Data Collection",
+  "privacy_policy_subtitle_2": "2. No Cookies or Tracking Technologies",
+  "privacy_policy_subtitle_3": "3. Third-Party Links",
+  "privacy_policy_subtitle_4": "4. Changes to This Privacy Policy",
+  "privacy_policy_subtitle_5": "5. Contact Information",
+  "privacy_policy_last_updated": "Last updated: {date}",
+  "privacy_policy_body_1": "Our website does not collect, store, or process any personal data from visitors. We do not use any cookies, trackers, or data collection forms, nor do we store any information about our users or their activities.",
+  "privacy_policy_body_2": "We do not use cookies or other tracking technologies on this site. No information about your visit or your behavior on this website is collected, analyzed, or stored.",
+  "privacy_policy_body_3": "Our website may contain links to other websites. We are not responsible for the privacy practices or content of these third-party websites. We encourage you to review the privacy policies of any external sites you may visit through links on our website.",
+  "privacy_policy_body_4": "We reserve the right to update this Privacy Policy at any time to reflect changes in our practices or legal requirements. Any updates will be posted on this page, and the “Last updated” date will be revised accordingly.",
+  "privacy_policy_body_5": "If you have any questions or concerns about this Privacy Policy, you may contact us at:",
+  "privacy_policy_credits": "Credits",
+  "privacy_policy_credits_body": "Icons used on this website are created by {names}. You can view the original icons at {url}."
 }

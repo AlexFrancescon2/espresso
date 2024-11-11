@@ -12,22 +12,20 @@ const scrollToSection = (id) => {
 };
 
 export const Footer = () => {
-  const sections = useMemo(
-    () => ["logo", "solutions", "why-us", "socials"],
-    []
-  );
+  const sections = useMemo(() => ["logo", "solutions", "whyus", "socials"], []);
   const [activeSection, setActiveSection] = useState("logo");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          console.log({ e: entry.target.id });
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
     sections.forEach((sectionId) => {
@@ -55,8 +53,8 @@ export const Footer = () => {
           Solutions
         </MenuItem>
         <MenuItem
-          onClick={() => scrollToSection("why-us")}
-          isActive={activeSection === "why-us"}
+          onClick={() => scrollToSection("whyus")}
+          isActive={activeSection === "whyus"}
         >
           Why us
         </MenuItem>

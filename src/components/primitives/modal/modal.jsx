@@ -1,7 +1,6 @@
-import React, { useRef, useCallback, useLayoutEffect } from "react";
+import { useCallback, useLayoutEffect, useRef } from "react";
 
 import { css } from "@/styles/system";
-
 // Hooks
 import { useClickOutside } from "./click-outside";
 
@@ -31,7 +30,7 @@ export const Modal = ({ children, isOpen, setIsOpen, hasWrapper, role }) => {
 
   return (
     <div className={styles({ hasWrapper })} role={role}>
-      <div ref={modalRef}>{children}</div>
+      <div ref={modalRef}> {children}</div>
     </div>
   );
 };

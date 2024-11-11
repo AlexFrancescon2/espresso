@@ -9,6 +9,8 @@ export const Section = ({
   marginTop,
   backgroundColor,
   id,
+  hasShadow,
+  isFullscreen,
 }) => {
   return (
     <div
@@ -18,6 +20,8 @@ export const Section = ({
         index: zindex,
         marginTop,
         backgroundColor,
+        hasShadow,
+        isFullscreen,
       })({
         css,
       })}
@@ -28,21 +32,33 @@ export const Section = ({
   );
 };
 
-const styles = ({ url, index, marginTop, backgroundColor }) =>
+const styles = ({
+  url,
+  index,
+  marginTop,
+  backgroundColor,
+  hasShadow,
+  isFullscreen,
+}) =>
   css({
-    minHeight: "100vh",
+    minHeight: isFullscreen ? "100vh" : null,
     padding: "$64",
     position: "relative",
     zIndex: index,
     marginTop: marginTop,
+    backgroundColor: `$${backgroundColor}`,
+    backgroundSize: "100% auto",
+    backgroundPosition: "bottom",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(src/assets/images/${url})`,
+    boxShadow: hasShadow
+      ? "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
+      : null,
+    borderBottom: hasShadow
+      ? `5px solid $${backgroundColor === "primary" ? "secondary" : "primary"}`
+      : null,
     "@bp1max": {
       padding: "$20",
     },
-    "@bp4min": {
-      backgroundSize: "100% auto",
-      backgroundPosition: "bottom",
-      backgroundRepeat: "no-repeat",
-      backgroundImage: `url(src/assets/images/${url}.png)`,
-      backgroundColor: `$${backgroundColor}`,
-    },
+    "@bp4min": {},
   });

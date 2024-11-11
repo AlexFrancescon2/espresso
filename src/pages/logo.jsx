@@ -10,10 +10,11 @@ export const Logo = () => {
   return (
     <>
       <Section
-        backgroundImage="bg1"
+        backgroundImage="bghome.png"
         zindex={5}
-        backgroundColor="secondary"
+        backgroundColor="secondaryBlurred"
         id="logo"
+        css={{ minHeight: "100vh" }}
       >
         <Div
           isFlex

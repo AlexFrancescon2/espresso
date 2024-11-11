@@ -16,6 +16,8 @@ export const colors = {
   red1: "#e11d48",
   primary: "#DCC39F",
   secondary: "#FFEBCD",
+  primaryBlurred: "#dcc39ff2",
+  secondaryBlurred: "#ffebcdf7",
 };
 
 export const shadows = colors;

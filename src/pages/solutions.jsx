@@ -10,10 +10,10 @@ export const Solutions = () => {
   return (
     <>
       <Section
-        backgroundImage="bg2"
         zindex={4}
-        backgroundColor="primary"
+        backgroundColor="secondaryBlurred"
         id="solutions"
+        hasShadow
       >
         <Div isFlex isJustifyCenter isAlignCenter css={{ marginBottom: "$28" }}>
           <Text size="xlarge" center isUnderlined>
@@ -48,7 +48,12 @@ export const Solutions = () => {
           />
         </Div>
 
-        <Div isFlex isJustifyCenter isAlignCenter css={{ marginTop: "$40" }}>
+        <Div
+          isFlex
+          isJustifyCenter
+          isAlignCenter
+          css={{ marginTop: "$40", marginBottom: "$40" }}
+        >
           <Text center color="grey" css={{ fontSize: "$35" }}>
             {translations["solutions.ending"]}
           </Text>
