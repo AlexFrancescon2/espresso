@@ -19,7 +19,6 @@ export const Footer = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log({ e: entry.target.id });
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
