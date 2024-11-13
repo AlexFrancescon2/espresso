@@ -4,7 +4,7 @@ import { LanguageSelector } from "./language-selector";
 import { MenuItem } from "./menu-items";
 import { css } from "@/styles/system";
 
-const scrollToSection = (id) => {
+export const scrollToSection = (id) => {
   const section = document.getElementById(id);
   if (section) {
     section.scrollIntoView({ behavior: "smooth" });
@@ -24,7 +24,7 @@ export const Footer = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.4 }
     );
 
     sections.forEach((sectionId) => {

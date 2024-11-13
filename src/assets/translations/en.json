@@ -1,7 +1,7 @@
 {
   "logo.subtitle": "IT Solutions",
   "solutions.title": "How We Help You Win",
-  "socials.title": "Socials",
+  "solutions.subtitle": "Your Success, Our Mission",
   "solutions.service_1_title": "Drive Sales Online",
   "solutions.service_1_description": "We turn browsers into buyers. Our online sales and ad strategies get your products in front of the right eyes and keep them coming back for more. Sales growth? Guaranteed.",
   "solutions.service_2_title": "Cloud Solutions Built for You",
@@ -12,6 +12,7 @@
   "solutions.service_4_description": "AI is no longer optional, and we’ve got you covered. From e-commerce pricing magic to customer-friendly chatbots, our AI solutions give you an edge that sticks.",
   "solutions.ending": "Get a free consultation, now",
   "why-us.title": "Why We’re the Team to Choose",
+  "why-us.subtitle": "Experience, Innovation, Results",
   "why-us.service_1_title": "Results You Can Measure",
   "why-us.service_1_description": "We don’t believe in fluff—just numbers. We’re all about hitting targets that matter to you, from boosting revenue to enhancing customer engagement.",
   "why-us.service_2_title": "Innovative and Forward-Focused",
@@ -33,5 +34,8 @@
   "privacy_policy_body_4": "We reserve the right to update this Privacy Policy at any time to reflect changes in our practices or legal requirements. Any updates will be posted on this page, and the “Last updated” date will be revised accordingly.",
   "privacy_policy_body_5": "If you have any questions or concerns about this Privacy Policy, you may contact us at:",
   "privacy_policy_credits": "Credits",
-  "privacy_policy_credits_body": "Icons used on this website are created by {names}. You can view the original icons at {url}."
+  "privacy_policy_credits_body": "Icons used on this website are created by {names}. You can view the original icons at {url}.",
+  "socials_title": "Reach out to us",
+  "socials_subtitle": "Trough the following social media",
+  "socials_email": "Or send us an email at"
 }

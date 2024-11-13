@@ -1,6 +1,7 @@
 import { Div } from "@/components/primitives/div";
 import { Section } from "@/components/primitives/section";
 import { Text } from "@/components/primitives/text";
+import { motion } from "framer-motion";
 import { useLanguage } from "@/assets/translations/languageProvider";
 
 export const WhyUs = () => {
@@ -9,40 +10,88 @@ export const WhyUs = () => {
   return (
     <Section
       zindex={3}
-      backgroundColor="grey1"
+      backgroundColor="primaryBlurred"
       id="whyus"
-      hasShadow
       isFullscreen
+      hasShadow
     >
-      <Div isFlex isJustifyCenter isAlignCenter css={{ marginBottom: "$64" }}>
-        <Text size="xlarge" center isUnderlined>
+      <Div isFlex isJustifyCenter isAlignCenter>
+        <Text variant="title" center>
           {translations["why-us.title"]}
+        </Text>
+      </Div>
+      <Div isFlex isJustifyCenter isAlignCenter css={{ marginBottom: "$64" }}>
+        <Text variant="subtitle" center>
+          {translations["why-us.subtitle"]}
         </Text>
       </Div>
       <Div isFlex isJustifyCenter>
         <Div css={cardContainerStyle}>
-          <Item
-            imageSrc={"src/assets/images/icons/research.png"}
-            title={translations["why-us.service_1_title"]}
-            description={translations["why-us.service_1_description"]}
-            isLeftAligned
-          />
-          <Item
-            imageSrc={"src/assets/images/icons/innovation.png"}
-            title={translations["why-us.service_2_title"]}
-            description={translations["why-us.service_2_description"]}
-          />
-          <Item
-            imageSrc={"src/assets/images/icons/ruler.png"}
-            title={translations["why-us.service_3_title"]}
-            description={translations["why-us.service_3_description"]}
-            isLeftAligned
-          />
-          <Item
-            imageSrc={"src/assets/images/icons/customer-review.png"}
-            title={translations["why-us.service_4_title"]}
-            description={translations["why-us.service_4_description"]}
-          />
+          <motion.div
+            initial={{ opacity: 0, x: -400 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+            }}
+          >
+            <Item
+              imageSrc={"src/assets/images/icons/research.png"}
+              title={translations["why-us.service_1_title"]}
+              description={translations["why-us.service_1_description"]}
+              isLeftAligned
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 400 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+            }}
+          >
+            <Item
+              imageSrc={"src/assets/images/icons/innovation.png"}
+              title={translations["why-us.service_2_title"]}
+              description={translations["why-us.service_2_description"]}
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: -400 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+            }}
+          >
+            <Item
+              imageSrc={"src/assets/images/icons/ruler.png"}
+              title={translations["why-us.service_3_title"]}
+              description={translations["why-us.service_3_description"]}
+              isLeftAligned
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 400 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+            }}
+          >
+            <Item
+              imageSrc={"src/assets/images/icons/customer-review.png"}
+              title={translations["why-us.service_4_title"]}
+              description={translations["why-us.service_4_description"]}
+            />
+          </motion.div>
         </Div>
       </Div>
 
@@ -56,7 +105,10 @@ export const WhyUs = () => {
 };
 
 const cardContainerStyle = {
-  width: "55vw",
+  width: "100%",
+  "@bp3min": {
+    width: "60vw",
+  },
   "@bp4min": {
     width: "40vw",
   },

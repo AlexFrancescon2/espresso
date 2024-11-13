@@ -2,6 +2,7 @@ import { Card } from "@/components/primitives/card";
 import { Div } from "@/components/primitives/div";
 import { Section } from "@/components/primitives/section";
 import { Text } from "@/components/primitives/text";
+import { scrollToSection } from "@/components/shared/footer/footer";
 import { useLanguage } from "@/assets/translations/languageProvider";
 
 export const Solutions = () => {
@@ -14,10 +15,16 @@ export const Solutions = () => {
         backgroundColor="secondaryBlurred"
         id="solutions"
         hasShadow
+        isFullscreen
       >
-        <Div isFlex isJustifyCenter isAlignCenter css={{ marginBottom: "$28" }}>
-          <Text size="xlarge" center isUnderlined>
+        <Div isFlex isJustifyCenter isAlignCenter>
+          <Text variant="title" center>
             {translations["solutions.title"]}
+          </Text>
+        </Div>
+        <Div isFlex isJustifyCenter isAlignCenter css={{ marginBottom: "$40" }}>
+          <Text variant="subtitle" center>
+            {translations["solutions.subtitle"]}
           </Text>
         </Div>
 
@@ -54,7 +61,11 @@ export const Solutions = () => {
           isAlignCenter
           css={{ marginTop: "$40", marginBottom: "$40" }}
         >
-          <Text center color="grey" css={{ fontSize: "$35" }}>
+          <Text
+            center
+            css={scroller}
+            onClick={() => scrollToSection("socials")}
+          >
             {translations["solutions.ending"]}
           </Text>
         </Div>
@@ -77,5 +88,14 @@ const cardStyle = {
   alignSelf: "stretch",
   "@bp3max": {
     width: "100%",
+  },
+};
+
+const scroller = {
+  fontSize: "$27",
+  color: "$grey7",
+  "&:hover": {
+    cursor: "pointer",
+    textDecoration: "underline",
   },
 };

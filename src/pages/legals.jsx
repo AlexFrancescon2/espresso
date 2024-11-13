@@ -1,9 +1,7 @@
 import { Div } from "@/components/primitives/div";
 import { PrivacyPolicy } from "@/pages/privacy-policy";
 import { Section } from "@/components/primitives/section";
-import { SocialIcon } from "@/components/shared/social-icon";
 import { Text } from "@/components/primitives/text";
-import { motion } from "framer-motion";
 import { useLanguage } from "@/assets/translations/languageProvider";
 import { useState } from "react";
 
@@ -18,9 +16,9 @@ export const Legals = () => {
         setIsOpen={setIsPrivacyPolicyOpen}
       />
       <Section
-        backgroundImage="bg2"
-        zindex={1}
-        backgroundColor="primaryBlurred"
+        backgroundImage="bg-blob-2.png"
+        zindex={3}
+        backgroundColor="secondaryBlurred"
         id="legals"
       >
         <Div isFlex isAlignCenter>

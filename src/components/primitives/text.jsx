@@ -56,9 +56,17 @@ const styles = css({
   color: "$black",
   variants: {
     variant: {
-      error: {
-        color: "$red1",
-        fontSize: "$2",
+      title: {
+        fontSize: "$35",
+        fontWeight: "700",
+        colro: "$black",
+        lineHeight: "40px",
+        display: "block",
+      },
+      subtitle: {
+        fontSize: "$20",
+        color: "$grey7",
+        display: "block",
       },
     },
     color: {

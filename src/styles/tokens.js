@@ -16,7 +16,7 @@ export const colors = {
   red1: "#e11d48",
   primary: "#DCC39F",
   secondary: "#FFEBCD",
-  primaryBlurred: "#dcc39ff2",
+  primaryBlurred: "#dcc39ff7",
   secondaryBlurred: "#ffebcdf7",
 };
 
@@ -45,6 +45,7 @@ export const space = {
   56: "56px",
   60: "60px",
   64: "64px",
+  76: "76px",
 };
 
 export const sizes = {

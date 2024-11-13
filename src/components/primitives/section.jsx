@@ -42,13 +42,13 @@ const styles = ({
 }) =>
   css({
     minHeight: isFullscreen ? "100vh" : null,
-    padding: "$64",
+    padding: "$76",
     position: "relative",
     zIndex: index,
     marginTop: marginTop,
     backgroundColor: `$${backgroundColor}`,
-    backgroundSize: "100% auto",
-    backgroundPosition: "bottom",
+    backgroundSize: "cover",
+    backgroundPosition: "center top",
     backgroundRepeat: "no-repeat",
     backgroundImage: `url(src/assets/images/${url})`,
     boxShadow: hasShadow

@@ -10,7 +10,7 @@ export const Logo = () => {
   return (
     <>
       <Section
-        backgroundImage="bghome.png"
+        backgroundImage="bg-blob-1.png"
         zindex={5}
         backgroundColor="secondaryBlurred"
         id="logo"
