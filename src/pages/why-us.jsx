@@ -37,7 +37,7 @@ export const WhyUs = () => {
             }}
           >
             <Item
-              imageSrc={"src/assets/images/icons/research.png"}
+              imageSrc={"/images/icons/research.png"}
               title={translations["why-us.service_1_title"]}
               description={translations["why-us.service_1_description"]}
               isLeftAligned
@@ -54,7 +54,7 @@ export const WhyUs = () => {
             }}
           >
             <Item
-              imageSrc={"src/assets/images/icons/innovation.png"}
+              imageSrc={"/images/icons/innovation.png"}
               title={translations["why-us.service_2_title"]}
               description={translations["why-us.service_2_description"]}
             />
@@ -70,7 +70,7 @@ export const WhyUs = () => {
             }}
           >
             <Item
-              imageSrc={"src/assets/images/icons/ruler.png"}
+              imageSrc={"/images/icons/ruler.png"}
               title={translations["why-us.service_3_title"]}
               description={translations["why-us.service_3_description"]}
               isLeftAligned
@@ -87,7 +87,7 @@ export const WhyUs = () => {
             }}
           >
             <Item
-              imageSrc={"src/assets/images/icons/customer-review.png"}
+              imageSrc={"/images/icons/customer-review.png"}
               title={translations["why-us.service_4_title"]}
               description={translations["why-us.service_4_description"]}
             />

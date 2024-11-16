@@ -3,7 +3,7 @@ import { css } from "@/styles/system";
 export const SocialIcon = ({ css, url, social }) => {
   return (
     <a href={url} className={styles({ css })}>
-      <img src={`src/assets/images/icons/${social}.png`} />
+      <img src={`/images/icons/${social}.png`} />
     </a>
   );
 };

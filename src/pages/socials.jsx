@@ -66,7 +66,7 @@ export const Socials = () => {
           >
             <Div isFlex isJustifyCenter isAlignCenter css={emailWrapperStyles}>
               <Div css={emailIconStyle} isFlex isJustifyCenter isAlignCenter>
-                <img src={`src/assets/images/icons/email.png`} width={60}></img>
+                <img src={`/images/icons/email.png`} width={60}></img>
               </Div>
               <Text isBlock variant="subtitle" css={{ marginBottom: "$8" }}>
                 {translations["socials_email"]}

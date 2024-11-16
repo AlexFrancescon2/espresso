@@ -16,7 +16,7 @@ export const Home = () => {
           top: "0",
           left: "0",
           zIndex: "-99",
-          backgroundImage: `url(src/assets/images/circuit-board.svg)`,
+          backgroundImage: `url(/images/circuit-board.svg)`,
         }}
       />
       <Div

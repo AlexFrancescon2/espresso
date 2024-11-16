@@ -30,25 +30,25 @@ export const Solutions = () => {
 
         <Div isFlex css={cardContainerStyle} isAlignCenter isJustifyCenter>
           <Card
-            imageSrc={`src/assets/images/icons/shopping-online.png`}
+            imageSrc={`/images/icons/shopping-online.png`}
             title={translations["solutions.service_1_title"]}
             description={translations["solutions.service_1_description"]}
             css={cardStyle}
           />
           <Card
-            imageSrc={`src/assets/images/icons/server.png`}
+            imageSrc={`/images/icons/server.png`}
             title={translations["solutions.service_2_title"]}
             description={translations["solutions.service_2_description"]}
             css={cardStyle}
           />
           <Card
-            imageSrc={`src/assets/images/icons/analysis.png`}
+            imageSrc={`/images/icons/analysis.png`}
             title={translations["solutions.service_3_title"]}
             description={translations["solutions.service_3_description"]}
             css={cardStyle}
           />
           <Card
-            imageSrc={`src/assets/images/icons/ai.png`}
+            imageSrc={`/images/icons/ai.png`}
             title={translations["solutions.service_4_title"]}
             description={translations["solutions.service_4_description"]}
             css={cardStyle}

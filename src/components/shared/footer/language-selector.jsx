@@ -23,7 +23,7 @@ export const LanguageSelector = () => {
         css={languageCircleStyle}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <img src={`src/assets/images/flags/${language}.png`} width={40}></img>
+        <img src={`/images/flags/${language}.png`} width={40}></img>
       </Div>
     </div>
   );

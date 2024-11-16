@@ -25,7 +25,7 @@ export const Legals = () => {
       >
         <Div isFlex isAlignCenter>
           <div>
-            <img src="src/assets/images/logo.png" width={50} />
+            <img src="/images/logo.png" width={50} />
           </div>
           <Text isBlock size="xlarge">
             Espresso

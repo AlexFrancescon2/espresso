@@ -21,7 +21,7 @@ export const LanguageSelectorMenu = ({ setIsOpen }) => {
             key={lang}
           >
             <Div css={languageCircleStyle} onClick={() => onSwitchLang(lang)}>
-              <img src={`src/assets/images/flags/${lang}.png`} width={30}></img>
+              <img src={`/images/flags/${lang}.png`} width={30}></img>
             </Div>
           </motion.div>
         );
