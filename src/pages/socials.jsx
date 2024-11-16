@@ -18,7 +18,6 @@ export const Socials = () => {
         backgroundColor="secondaryBlurred"
         id="socials"
         isFullscreen
-        hasShadow
       >
         <Div isFlex isJustifyCenter isAlignCenter>
           <Text variant="title" center>
@@ -31,7 +30,7 @@ export const Socials = () => {
           </Text>
         </Div>
 
-        <Div isFlex isJustifyCenter isAlignCenter css={{ gap: "$48" }}>
+        <Div css={socialsWrapper}>
           {socials.map((social, index) => (
             <motion.div
               initial={{ opacity: 0, y: 300 }}
@@ -103,4 +102,14 @@ const emailIconStyle = {
   top: "-40px",
   width: " 80px",
   height: "80px",
+};
+
+const socialsWrapper = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "$48",
+  "@bp2max": {
+    flexDirection: "column",
+  },
 };

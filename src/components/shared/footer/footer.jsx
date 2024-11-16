@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 
-import { LanguageSelector } from "./language-selector";
 import { MenuItem } from "./menu-items";
 import { css } from "@/styles/system";
+
+// import { LanguageSelector } from "./language-selector";
 
 export const scrollToSection = (id) => {
   const section = document.getElementById(id);
@@ -64,7 +65,7 @@ export const Footer = () => {
           Socials
         </MenuItem>
         <span></span>
-        <LanguageSelector />
+        {/* <LanguageSelector /> */}
       </footer>
     </div>
   );
@@ -79,9 +80,9 @@ const wrapperStyle = css({
 
 const footerStyle = css({
   position: "fixed",
-  bottom: "50px",
+  bottom: "20px",
   borderRadius: "$pill",
-  width: "40vw",
+  width: "350px",
   zIndex: "99",
   boxShadow: "8px 0px 16px rgba(0, 0, 0, 0.2)",
   backgroundColor: "$black",
@@ -89,4 +90,7 @@ const footerStyle = css({
   border: "3px solid $white",
   display: "flex",
   justifyContent: "space-between",
+  "@bp2max": {
+    display: "none",
+  },
 });
