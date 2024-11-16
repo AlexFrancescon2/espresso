@@ -50,7 +50,7 @@ const styles = ({
     backgroundSize: "cover",
     backgroundPosition: "center top",
     backgroundRepeat: "no-repeat",
-    backgroundImage: `url(/public/images/${url})`,
+    backgroundImage: `url(/images/${url})`,
     boxShadow: hasShadow
       ? "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
       : null,
