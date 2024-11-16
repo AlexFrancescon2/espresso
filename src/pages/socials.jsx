@@ -5,10 +5,12 @@ import { Text } from "@/components/primitives/text";
 import { css } from "@/styles/system";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/assets/translations/languageProvider";
+import useScreenWidth from "@/hooks/screen-size";
 
 export const Socials = () => {
   const { translations } = useLanguage();
   const socials = ["instagram", "youtube", "linkedin", "reddit", "tiktok"];
+  const screenWidth = useScreenWidth();
 
   return (
     <>
@@ -34,7 +36,10 @@ export const Socials = () => {
           {socials.map((social, index) => (
             <motion.div
               initial={{ opacity: 0, y: 300 }}
-              whileInView={{ opacity: 1, y: index % 2 === 0 ? 0 : 40 }}
+              whileInView={{
+                opacity: 1,
+                y: index % 2 === 0 ? 0 : screenWidth > 769 ? 40 : 0,
+              }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{
                 delay: `0.${index + 1}`,
