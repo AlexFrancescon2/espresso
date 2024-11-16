@@ -27,7 +27,7 @@ export const Logo = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img src="/src/assets/images/logo.png" width={350} />
+            <img src="/images/logo.png" width={350} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
