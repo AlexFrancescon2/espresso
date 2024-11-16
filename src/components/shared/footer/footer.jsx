@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { MenuItem } from "./menu-items";
 import { css } from "@/styles/system";
+import { useLanguage } from "@/assets/translations/languageProvider";
 
 // import { LanguageSelector } from "./language-selector";
 
@@ -15,6 +16,7 @@ export const scrollToSection = (id) => {
 export const Footer = () => {
   const sections = useMemo(() => ["logo", "solutions", "whyus", "socials"], []);
   const [activeSection, setActiveSection] = useState("logo");
+  const { translations } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,19 +52,19 @@ export const Footer = () => {
           onClick={() => scrollToSection("solutions")}
           isActive={activeSection === "solutions"}
         >
-          Solutions
+          {translations["footer.solutions"]}
         </MenuItem>
         <MenuItem
           onClick={() => scrollToSection("whyus")}
           isActive={activeSection === "whyus"}
         >
-          Why us
+          {translations["footer.whyus"]}
         </MenuItem>
         <MenuItem
           onClick={() => scrollToSection("socials")}
           isActive={activeSection === "socials"}
         >
-          Socials
+          {translations["footer.socials"]}
         </MenuItem>
         <span></span>
         {/* <LanguageSelector /> */}
