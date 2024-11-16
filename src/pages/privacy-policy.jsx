@@ -63,10 +63,12 @@ export const PrivacyPolicy = ({ isOpen, setIsOpen }) => {
             {translations.privacy_policy_credits}
           </Text>
           <Text>
-            {translations.privacy_policy_credits_body.replace(
-              "{url}",
-              "https://www.flaticon.com/"
-            )}
+            {translations.privacy_policy_credits_body
+              .replace("{url}", "https://www.flaticon.com/")
+              .replace(
+                "{names}",
+                "Freepik, designhub, Yumminky, Md Tanvirul Haque, Hilmy Abiyyu A."
+              )}
           </Text>
         </Div>
       </Div>
