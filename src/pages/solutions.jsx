@@ -61,13 +61,18 @@ export const Solutions = () => {
           isAlignCenter
           css={{ marginTop: "$40", marginBottom: "$40" }}
         >
-          <Text
-            center
+          <Div
             css={scroller}
+            isFlex
+            isJustifyCenter
+            isAlignCenter
             onClick={() => scrollToSection("socials")}
           >
-            {translations["solutions.ending"]}
-          </Text>
+            <Div css={ArrowDownIconStyle} isFlex isJustifyCenter isAlignCenter>
+              <img src={`/images/icons/bottom.png`} width={60}></img>
+            </Div>
+            <Text>{translations["solutions.ending"]}</Text>
+          </Div>
         </Div>
       </Section>
     </>
@@ -92,10 +97,21 @@ const cardStyle = {
 };
 
 const scroller = {
-  fontSize: "$27",
-  color: "$grey7",
-  "&:hover": {
-    cursor: "pointer",
-    textDecoration: "underline",
-  },
+  flexDirection: "column",
+  padding: "$36   ",
+  backgroundColor: "$white",
+  borderRadius: "$8",
+  position: "relative",
+  cursor: "pointer",
+};
+
+const ArrowDownIconStyle = {
+  position: "absolute",
+  backgroundColor: "$white",
+  border: "2px solid $white",
+  borderRadius: "$pill",
+  bottom: "-30px",
+  width: " 60px",
+  height: "60px",
+  cursor: "pointer",
 };

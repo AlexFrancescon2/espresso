@@ -21,14 +21,13 @@ export const Card = ({ css, onClick, imageSrc, title, description }) => {
 };
 
 const styles = css({
-  backgroundColor: "rgba(255, 255, 255, 0.56)",
+  backgroundColor: "$white",
   borderRadius: "$12",
   padding: "$20",
   display: "flex",
   boxShadow: "10px 10px 20px -14px rgba(0, 0, 0, 1.0)",
   "&:hover": {
     boxShadow: "12px 12px 22px -14px rgba(0, 0, 0, 1.0)",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
   },
 });
 
