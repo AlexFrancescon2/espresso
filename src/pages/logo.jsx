@@ -34,7 +34,7 @@ export const Logo = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <Text css={{ fontSize: "5em" }} isBold>
+            <Text css={titleStyle} isBold>
               Espresso
             </Text>
           </motion.div>
@@ -52,3 +52,5 @@ export const Logo = () => {
     </>
   );
 };
+
+const titleStyle = { fontSize: "5em", "@bp1max": { fontSize: "4em" } };

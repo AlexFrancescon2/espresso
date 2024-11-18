@@ -9,7 +9,21 @@ import useScreenWidth from "@/hooks/screen-size";
 
 export const Socials = () => {
   const { translations } = useLanguage();
-  const socials = ["instagram", "youtube", "linkedin", "reddit", "tiktok"];
+  // const socials = ["instagram", "youtube", "linkedin", "reddit", "tiktok"];
+  const socials = [
+    {
+      social: "youtube",
+      url: "https://youtube.com/@espressoitsolutions?si=-xAiAi67h-Pm2qQL",
+    },
+    {
+      social: "tiktok",
+      url: "https://www.tiktok.com/@espressoitsolutions?_t=8rRtiFj2Nl3&_r=1",
+    },
+    {
+      social: "reddit",
+      url: "https://www.reddit.com/user/espressoitsolutions/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button",
+    },
+  ];
   const screenWidth = useScreenWidth();
 
   return (
@@ -33,7 +47,7 @@ export const Socials = () => {
         </Div>
 
         <Div css={socialsWrapper}>
-          {socials.map((social, index) => (
+          {socials.map((obj, index) => (
             <motion.div
               initial={{ opacity: 0, y: 300 }}
               whileInView={{
@@ -46,9 +60,9 @@ export const Socials = () => {
                 type: "spring",
                 stiffness: 100,
               }}
-              key={social}
+              key={obj.name}
             >
-              <SocialIcon social={social}></SocialIcon>
+              <SocialIcon social={obj}></SocialIcon>
             </motion.div>
           ))}
         </Div>
@@ -71,8 +85,11 @@ export const Socials = () => {
               <Text isBlock variant="subtitle" css={{ marginBottom: "$8" }}>
                 {translations["socials_email"]}
               </Text>
-              <a href="mailto:john@example.com" className={emailStyles()}>
-                exampleEmail.com
+              <a
+                href="mailto:admin@espresso-itsolutions.com"
+                className={emailStyles()}
+              >
+                admin@espresso-itsolutions.com
               </a>
             </Div>
           </motion.div>
@@ -84,7 +101,7 @@ export const Socials = () => {
 
 const emailWrapperStyles = {
   flexDirection: "column",
-  padding: "$36   ",
+  padding: "$36",
   backgroundColor: "$white",
   borderRadius: "$8",
   position: "relative",

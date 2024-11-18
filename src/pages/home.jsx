@@ -16,7 +16,12 @@ export const Home = () => {
           top: "0",
           left: "0",
           zIndex: "-99",
-          backgroundImage: `url(/images/circuit-board.svg)`,
+          "@bp1max": {
+            display: "none",
+          },
+          "@bp1min": {
+            backgroundImage: `url(/images/circuit-board.svg)`,
+          },
         }}
       />
       <Div

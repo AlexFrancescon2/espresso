@@ -1,9 +1,9 @@
 import { css } from "@/styles/system";
 
-export const SocialIcon = ({ css, url, social }) => {
+export const SocialIcon = ({ css, social }) => {
   return (
-    <a href={url} className={styles({ css })}>
-      <img src={`/images/icons/${social}.png`} />
+    <a href={social.url} className={styles({ css })}>
+      <img src={`/images/icons/${social.social}.png`} target="_blank" />
     </a>
   );
 };

@@ -58,7 +58,7 @@ const styles = ({
       ? `5px solid $${backgroundColor === "primary" ? "secondary" : "primary"}`
       : null,
     "@bp1max": {
-      padding: "$20",
+      padding: "$40 $24",
     },
     "@bp4min": {},
   });
