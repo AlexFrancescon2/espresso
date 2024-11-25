@@ -50,7 +50,7 @@ const styles = ({
     backgroundSize: "cover",
     backgroundPosition: "center top",
     backgroundRepeat: "no-repeat",
-    backgroundImage: `url(/images/${url})`,
+    backgroundImage: url && `url(/images/${url})`,
     boxShadow: hasShadow
       ? "rgba(0, 0, 0, 0.19) 0px 20px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
       : null,
@@ -60,5 +60,4 @@ const styles = ({
     "@bp1max": {
       padding: "$40 $24",
     },
-    "@bp4min": {},
   });

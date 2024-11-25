@@ -14,7 +14,7 @@ export const Banner = () => {
         backgroundColor="secondaryBlurred"
         id="banner"
         hasShadow
-        css={{ padding: "0 $76 200px $76" }}
+        css={customSection}
       >
         <Div isFlex isJustifyCenter isAlignCenter>
           <Div
@@ -71,4 +71,11 @@ const ArrowDownIconStyle = {
   width: " 60px",
   height: "60px",
   cursor: "pointer",
+};
+
+const customSection = {
+  padding: "0 $76 200px $76",
+  "@bp1max": {
+    padding: "$40 $24 100px $24",
+  },
 };
