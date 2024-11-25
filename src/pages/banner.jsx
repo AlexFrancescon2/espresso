@@ -1,6 +1,7 @@
 import { Div } from "@/components/primitives/div";
 import { Section } from "@/components/primitives/section";
 import { Text } from "@/components/primitives/text";
+import { motion } from "framer-motion";
 import { scrollToSection } from "@/components/shared/footer/footer";
 import { useLanguage } from "@/assets/translations/languageProvider";
 
@@ -16,65 +17,78 @@ export const Banner = () => {
         hasShadow
         css={customSection}
       >
-        <Div isFlex isJustifyCenter isAlignCenter>
+        <Div
+          isFlex
+          isJustifyCenter
+          isAlignCenter
+          css={{ flexDirection: "column" }}
+        >
+          <Div isFlex isJustifyCenter isAlignCenter>
+            <Text variant="title" center css={{ marginBottom: "$8" }}>
+              {translations["banner.intro"]}
+            </Text>
+          </Div>
           <Div
-            css={scroller}
             isFlex
             isJustifyCenter
             isAlignCenter
-            onClick={() => scrollToSection("socials")}
+            css={{ marginBottom: "$4" }}
           >
-            <Div isFlex isJustifyCenter isAlignCenter>
-              <Text css={{ fontSize: "$27", marginBottom: "$8" }} center>
-                {translations["banner.intro"]}
-              </Text>
-            </Div>
+            <Text variant="subtitle" center>
+              {translations["banner.ending"]}
+            </Text>
+          </Div>
+          <motion.div
+            animate={{ y: 8 }}
+            transition={{
+              type: "spring",
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 1,
+            }}
+          >
             <Div
+              css={ArrowDownIconStyle}
               isFlex
               isJustifyCenter
               isAlignCenter
-              css={{ marginBottom: "$4" }}
+              onClick={() => scrollToSection("socials")}
             >
-              <Text variant="subtitle" center>
-                {translations["banner.ending"]}
-              </Text>
-            </Div>
-            <Div css={ArrowDownIconStyle} isFlex isJustifyCenter isAlignCenter>
               <img src={`/images/icons/bottom.png`} width={60}></img>
             </Div>
-          </Div>
+          </motion.div>
         </Div>
       </Section>
     </>
   );
 };
 
-const scroller = {
-  flexDirection: "column",
-  padding: "$36   ",
-  backgroundColor: "$white",
-  borderRadius: "$8",
-  position: "relative",
-  cursor: "pointer",
-  width: "40vw",
-  "@bp2max": {
-    width: "80vw",
-  },
-};
+// const scroller = {
+//   flexDirection: "column",
+//   padding: "$36   ",
+//   backgroundColor: "$white",
+//   borderRadius: "$8",
+//   position: "relative",
+//   cursor: "pointer",
+//   width: "40vw",
+//   "@bp2max": {
+//     width: "80vw",
+//   },
+// };
 
 const ArrowDownIconStyle = {
-  position: "absolute",
-  backgroundColor: "$white",
-  border: "2px solid $white",
+  position: "relative",
+  // backgroundColor: "$white",
+  // border: "2px solid $white",
   borderRadius: "$pill",
-  bottom: "-30px",
+  // bottom: "-30px",
   width: " 60px",
   height: "60px",
   cursor: "pointer",
 };
 
 const customSection = {
-  padding: "0 $76 200px $76",
+  padding: "$76 $76 200px $76",
   "@bp1max": {
     padding: "$40 $24 100px $24",
   },
