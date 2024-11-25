@@ -60,7 +60,7 @@ export const Socials = () => {
                 type: "spring",
                 stiffness: 100,
               }}
-              key={obj.name}
+              key={obj.social}
             >
               <SocialIcon social={obj}></SocialIcon>
             </motion.div>

@@ -52,7 +52,7 @@ const styles = ({
     backgroundRepeat: "no-repeat",
     backgroundImage: `url(/images/${url})`,
     boxShadow: hasShadow
-      ? "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
+      ? "rgba(0, 0, 0, 0.19) 0px 20px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
       : null,
     borderBottom: hasShadow
       ? `5px solid $${backgroundColor === "primary" ? "secondary" : "primary"}`

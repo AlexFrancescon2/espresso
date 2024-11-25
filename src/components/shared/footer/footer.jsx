@@ -64,7 +64,7 @@ export const Footer = () => {
           onClick={() => scrollToSection("socials")}
           isActive={activeSection === "socials"}
         >
-          {translations["footer.socials"]}
+          {translations["banner.socials"]}
         </MenuItem>
         <span></span>
         {/* <LanguageSelector /> */}

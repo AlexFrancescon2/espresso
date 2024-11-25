@@ -2,7 +2,6 @@ import { Card } from "@/components/primitives/card";
 import { Div } from "@/components/primitives/div";
 import { Section } from "@/components/primitives/section";
 import { Text } from "@/components/primitives/text";
-import { scrollToSection } from "@/components/shared/footer/footer";
 import { useLanguage } from "@/assets/translations/languageProvider";
 
 export const Solutions = () => {
@@ -12,7 +11,7 @@ export const Solutions = () => {
     <>
       <Section
         zindex={4}
-        backgroundColor="secondaryBlurred"
+        backgroundColor="primaryBlurred"
         id="solutions"
         hasShadow
         isFullscreen
@@ -54,26 +53,6 @@ export const Solutions = () => {
             css={cardStyle}
           />
         </Div>
-
-        <Div
-          isFlex
-          isJustifyCenter
-          isAlignCenter
-          css={{ marginTop: "$40", marginBottom: "$40" }}
-        >
-          <Div
-            css={scroller}
-            isFlex
-            isJustifyCenter
-            isAlignCenter
-            onClick={() => scrollToSection("socials")}
-          >
-            <Div css={ArrowDownIconStyle} isFlex isJustifyCenter isAlignCenter>
-              <img src={`/images/icons/bottom.png`} width={60}></img>
-            </Div>
-            <Text>{translations["solutions.ending"]}</Text>
-          </Div>
-        </Div>
       </Section>
     </>
   );
@@ -94,24 +73,4 @@ const cardStyle = {
   "@bp3max": {
     width: "100%",
   },
-};
-
-const scroller = {
-  flexDirection: "column",
-  padding: "$36   ",
-  backgroundColor: "$white",
-  borderRadius: "$8",
-  position: "relative",
-  cursor: "pointer",
-};
-
-const ArrowDownIconStyle = {
-  position: "absolute",
-  backgroundColor: "$white",
-  border: "2px solid $white",
-  borderRadius: "$pill",
-  bottom: "-30px",
-  width: " 60px",
-  height: "60px",
-  cursor: "pointer",
 };

@@ -2,12 +2,11 @@ import { Div } from "@/components/primitives/div";
 import { PrivacyPolicy } from "@/pages/privacy-policy";
 import { Section } from "@/components/primitives/section";
 import { Text } from "@/components/primitives/text";
+import { useLanguage } from "@/assets/translations/languageProvider";
 import { useState } from "react";
 
-// import { useLanguage } from "@/assets/translations/languageProvider";
-
 export const Legals = () => {
-  // const { translations } = useLanguage();
+  const { translations } = useLanguage();
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
 
   return (
@@ -23,7 +22,7 @@ export const Legals = () => {
         id="legals"
         css={{ padding: "$76 $76 $32 $76" }}
       >
-        <Div isFlex isAlignCenter>
+        <Div isFlex isAlignCenter css={{ marginBottom: "$20" }}>
           <div>
             <img src="/images/logo.png" width={50} />
           </div>
@@ -31,13 +30,18 @@ export const Legals = () => {
             Espresso
           </Text>
         </Div>
-        <Text isBlock>Legal Address</Text>
-        <Text isBlock>KvK</Text>
+        <Text isBlock css={{ marginBottom: "$8" }}>
+          <b>{translations["legal_address"]}</b>: Papaverweg 34 - unit B100,
+          1032 KJ, Amsterdam
+        </Text>
+        <Text isBlock css={{ marginBottom: "$8" }}>
+          <b>KvK</b>: 95228675
+        </Text>
         <Div
           css={privacyPolicyStyle}
           onClick={() => setIsPrivacyPolicyOpen(true)}
         >
-          <Text isBlock>See our privacy policy</Text>
+          <Text isBlock>{translations["privacy_policy"]}</Text>
         </Div>
       </Section>
     </>
