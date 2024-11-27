@@ -10,11 +10,11 @@ export const Solutions = () => {
   return (
     <>
       <Section
-        zindex={4}
+        zindex={2}
         backgroundColor="primaryBlurred"
         id="solutions"
-        hasShadow
         isFullscreen
+        hasShadow
       >
         <Div isFlex isJustifyCenter isAlignCenter>
           <Text variant="title" center>

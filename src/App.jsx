@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Footer } from "@/components/shared/footer/footer";
+// import { Footer } from "@/components/shared/footer/footer";
 import { Home } from "@/pages/home";
 import { LanguageProvider } from "@/assets/translations/languageProvider";
 
@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Home />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </LanguageProvider>
   );

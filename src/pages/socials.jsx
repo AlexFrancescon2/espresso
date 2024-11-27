@@ -30,10 +30,11 @@ export const Socials = () => {
     <>
       <Section
         backgroundImage="bg2"
-        zindex={2}
+        zindex={3}
         backgroundColor="secondaryBlurred"
         id="socials"
         isFullscreen
+        hasShadow
       >
         <Div isFlex isJustifyCenter isAlignCenter>
           <Text variant="title" center>

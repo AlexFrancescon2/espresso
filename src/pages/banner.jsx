@@ -14,7 +14,6 @@ export const Banner = () => {
         zindex={5}
         backgroundColor="secondaryBlurred"
         id="banner"
-        hasShadow
         css={customSection}
       >
         <Div
@@ -24,8 +23,13 @@ export const Banner = () => {
           css={{ flexDirection: "column" }}
         >
           <Div isFlex isJustifyCenter isAlignCenter>
+            <Text variant="title" center css={{ marginBottom: "$4" }}>
+              {translations["banner.intro_1"]}
+            </Text>
+          </Div>
+          <Div isFlex isJustifyCenter isAlignCenter>
             <Text variant="title" center css={{ marginBottom: "$8" }}>
-              {translations["banner.intro"]}
+              {translations["banner.intro_2"]}
             </Text>
           </Div>
           <Div

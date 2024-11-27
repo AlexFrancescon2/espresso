@@ -55,7 +55,9 @@ const styles = ({
       ? "rgba(0, 0, 0, 0.19) 0px 20px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
       : null,
     borderBottom: hasShadow
-      ? `5px solid $${backgroundColor === "primary" ? "secondary" : "primary"}`
+      ? `5px solid $${
+          backgroundColor.includes("primary") ? "secondary" : "primary"
+        }`
       : null,
     "@bp1max": {
       padding: "$40 $24",

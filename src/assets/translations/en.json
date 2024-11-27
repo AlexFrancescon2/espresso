@@ -3,7 +3,7 @@
   "footer.solutions": "Solutions",
   "footer.whyus": "Why us",
   "footer.socials": "Contacts",
-  "solutions.title": "How We Help You Win",
+  "solutions.title": "How We Help You Sell More",
   "solutions.subtitle": "Your Success, Our Mission",
   "solutions.service_1_title": "Drive Sales Online",
   "solutions.service_1_description": "We turn browsers into buyers. Our online sales and ad strategies get your products in front of the right eyes and keep them coming back for more. Sales growth? Guaranteed.",
@@ -13,7 +13,8 @@
   "solutions.service_3_description": "Knowledge is power! Our hands-on training makes sure your team stays at the top of their game, streamlining operations and maximizing results with the skills that matter. ",
   "solutions.service_4_title": "Yep, We Do AI",
   "solutions.service_4_description": "AI is no longer optional, and we’ve got you covered. From e-commerce pricing magic to customer-friendly chatbots, our AI solutions give you an edge that sticks.",
-  "banner.intro": "Sell your products online now, using AI",
+  "banner.intro_1": "Sell your products online now,",
+  "banner.intro_2": "using AI",
   "banner.ending": "Get a free consultation",
   "why-us.title": "Why We’re the Team to Choose",
   "why-us.subtitle": "Experience, Innovation, Results",
@@ -43,5 +44,8 @@
   "socials_subtitle": "Trough the following social media",
   "socials_email": "Or send us an email at",
   "legal_address": "Legal address",
-  "privacy_policy": "See our privacy policy"
+  "privacy_policy": "See our privacy policy",
+  "certifications.title": "Building Trust Together",
+  "certifications.subtitle_1": "Partners",
+  "certifications.subtitle_2": "Certifications"
 }
