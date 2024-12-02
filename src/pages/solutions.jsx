@@ -10,8 +10,8 @@ export const Solutions = () => {
   return (
     <>
       <Section
-        zindex={2}
-        backgroundColor="primaryBlurred"
+        zindex={3}
+        backgroundColor="secondaryBlurred"
         id="solutions"
         isFullscreen
         hasShadow

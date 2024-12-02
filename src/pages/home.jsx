@@ -27,8 +27,8 @@ export const Home = () => {
       >
         <Logo />
         <Banner />
-        <Socials />
         <Solutions />
+        <Socials />
         <Certificates />
         <Legals />
       </Div>

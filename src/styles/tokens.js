@@ -24,7 +24,7 @@ export const shadows = colors;
 
 export const fonts = {
   normal:
-    "Montserrat, Roboto Custom, -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif",
+    "Exo 2, Montserrat, Roboto Custom, -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif",
   mono: "Menlo, Consolas, monospace",
 };
 

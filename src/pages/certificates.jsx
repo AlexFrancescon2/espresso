@@ -10,20 +10,20 @@ export const Certificates = () => {
   return (
     <>
       <Section zindex={1} backgroundColor="secondaryBlurred" id="banner">
-        <Div
-          isFlex
-          isJustifyCenter
-          isAlignCenter
-          css={{ flexDirection: "column" }}
-        >
+        <Div isFlex isJustifyCenter isAlignCenter css={containerStyle}>
+          <Div isFlex isJustifyCenter isAlignCenter>
+            <Text variant="title" center>
+              {translations["certifications.title"]}
+            </Text>
+          </Div>
           <Div
             isFlex
             isJustifyCenter
             isAlignCenter
             css={{ marginBottom: "$76" }}
           >
-            <Text variant="title" center>
-              {translations["certifications.title"]}
+            <Text variant="subtitle" center>
+              {translations["certifications.subtitle"]}
             </Text>
           </Div>
         </Div>
@@ -105,5 +105,13 @@ const contentStyle = {
   alignSelf: "stretch",
   "@bp2max": {
     width: "100%",
+  },
+};
+
+const containerStyle = {
+  flexDirection: "column",
+  padding: "$20 0",
+  "@bp4min": {
+    padding: "$20 8vw",
   },
 };

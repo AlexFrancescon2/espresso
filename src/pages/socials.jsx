@@ -29,9 +29,8 @@ export const Socials = () => {
   return (
     <>
       <Section
-        backgroundImage="bg2"
-        zindex={3}
-        backgroundColor="secondaryBlurred"
+        zindex={2}
+        backgroundColor="primaryBlurred"
         id="socials"
         isFullscreen
         hasShadow
