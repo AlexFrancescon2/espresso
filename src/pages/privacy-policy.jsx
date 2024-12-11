@@ -67,7 +67,7 @@ export const PrivacyPolicy = ({ isOpen, setIsOpen }) => {
               .replace("{url}", "https://www.flaticon.com/")
               .replace(
                 "{names}",
-                "Freepik, designhub, Yumminky, Md Tanvirul Haque, Hilmy Abiyyu A., laterunlabs"
+                "Freepik, designhub, Yumminky, Md Tanvirul Haque, Hilmy Abiyyu A., laterunlabs, Lagot Design"
               )}
           </Text>
         </Div>

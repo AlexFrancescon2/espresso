@@ -1,4 +1,5 @@
-import { Banner } from "./banner";
+// import { Banner } from "./banner";
+
 import { Certificates } from "@/pages/certificates";
 import { Div } from "@/components/primitives/div";
 import { Legals } from "@/pages/legals";
@@ -26,7 +27,7 @@ export const Home = () => {
         }}
       >
         <Logo />
-        <Banner />
+        {/* <Banner /> */}
         <Solutions />
         <Socials />
         <Certificates />

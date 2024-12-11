@@ -2,6 +2,7 @@ import { Div } from "@/components/primitives/div";
 import { Section } from "@/components/primitives/section";
 import { Text } from "@/components/primitives/text";
 import { motion } from "framer-motion";
+import { scrollToSection } from "@/components/shared/footer/footer";
 import { useLanguage } from "@/assets/translations/languageProvider";
 
 export const Logo = () => {
@@ -22,30 +23,73 @@ export const Logo = () => {
           isAlignCenter
           css={{ width: "100%", height: "100%", flexDirection: "column" }}
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+          <img src="/images/logo.png" width={280} />
+
+          <Text css={titleStyle} isBold isBlock>
+            Espresso
+          </Text>
+
+          <Text
+            isBlock
+            css={{ fontSize: "2em", marginTop: "$16" }}
+            color="darkgrey"
           >
-            <img src="/images/logo.png" width={350} />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <Text css={titleStyle} isBold>
-              Espresso
+            {translations["logo.subtitle"]}
+          </Text>
+        </Div>
+        <Div
+          isFlex
+          isJustifyCenter
+          isAlignCenter
+          css={{ flexDirection: "column", marginTop: "80px" }}
+        >
+          <Div isFlex isJustifyCenter isAlignCenter>
+            <Text variant="title" center css={{ marginBottom: "$4" }}>
+              {translations["banner.intro_1"]}
             </Text>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-          >
-            <Text css={{ fontSize: "2em" }} color="darkgrey">
-              {translations["logo.subtitle"]}
+          </Div>
+          <Div isFlex isJustifyCenter isAlignCenter>
+            <Text
+              variant="title"
+              center
+              css={{ marginBottom: "$8", textDecoration: "underline" }}
+            >
+              {translations["banner.intro_2"]}
             </Text>
+          </Div>
+          <Div
+            isFlex
+            isJustifyCenter
+            isAlignCenter
+            css={{ marginBottom: "$4" }}
+          >
+            <Text
+              variant="subtitle"
+              center
+              isBlock
+              css={{ marginBottom: "$4" }}
+            >
+              {translations["banner.ending"]}
+            </Text>
+          </Div>
+          <motion.div
+            animate={{ y: 8 }}
+            transition={{
+              type: "spring",
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 1.5,
+            }}
+          >
+            <Div
+              css={arrowDownIconStyle}
+              isFlex
+              isJustifyCenter
+              isAlignCenter
+              onClick={() => scrollToSection("socials")}
+            >
+              <img src={`/images/icons/bottom.png`} width={60}></img>
+            </Div>
           </motion.div>
         </Div>
       </Section>
@@ -53,4 +97,17 @@ export const Logo = () => {
   );
 };
 
-const titleStyle = { fontSize: "5em", "@bp1max": { fontSize: "4em" } };
+const titleStyle = {
+  fontSize: "4em",
+  lineHeight: "50px",
+  marginTop: "$8",
+  "@bp1max": { fontSize: "3em" },
+};
+
+const arrowDownIconStyle = {
+  position: "relative",
+  borderRadius: "$pill",
+  width: " 60px",
+  height: "60px",
+  cursor: "pointer",
+};
